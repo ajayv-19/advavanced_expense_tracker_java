@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="client.DashboardController">
+
+    <!-- Top Title -->
+    <top>
+        <Label text="Expense Tracker Dashboard" 
+               style="-fx-font-size: 24px; -fx-padding: 20px;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <!-- Center Form -->
+    <center>
+        <VBox spacing="15" alignment="CENTER" style="-fx-padding: 20;">
+            <TextField fx:id="amountField" promptText="Amount (e.g., 50.0)" />
+            <TextField fx:id="categoryField" promptText="Category (e.g., Food)" />
+            <DatePicker fx:id="datePicker" promptText="Date" />
+            <TextField fx:id="descriptionField" promptText="Description (e.g., Lunch)" />
+
+            <Button text="Add Expense" onAction="#handleAddExpense" maxWidth="200"/>
+
+            <Separator />
+
+            <Button text="Generate Monthly Chart" onAction="#handleGenerateChart" maxWidth="200"/>
+            <Button text="Export Expenses to CSV" onAction="#handleExportCSV" maxWidth="200"/>
+
+            <Label fx:id="messageLabel" style="-fx-text-fill: green;" />
+        </VBox>
+    </center>
+
+    <!-- Bottom Logout -->
+    <bottom>
+        <Button text="Logout" onAction="#handleLogout" 
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 10;"
+                BorderPane.alignment="CENTER"/>
+    </bottom>
+
+</BorderPane>

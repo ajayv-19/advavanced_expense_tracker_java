@@ -1,0 +1,14 @@
+# Compiled
+bin/
+*.class
+
+# IDE
+.settings/
+.project
+.classpath
+
+# OS
+.DS_Store
+
+# Local DB (optional - remove this line if you want to track expenses.db)
+# expenses.db

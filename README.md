@@ -1,63 +1,106 @@
-Advanced Expense Tracker (Java)
-Overview
-Keeping track of spending shouldn't feel like a chore. This Advanced Expense Tracker is a sleek, desktop-based solution designed to help you take control of your finances. Built with a focus on simplicity and data visualization, it transforms raw numbers into clear, actionable insights.
+# Advanced Expense Tracker (Java)
+
+## Overview
+Keeping track of spending shouldn't feel like a chore. This **Advanced Expense Tracker** is a sleek desktop-based solution designed to help you take control of your finances. Built with a focus on simplicity and data visualization, it transforms raw numbers into clear, actionable insights.
 
 Whether you're looking to cut down on coffee runs or manage a monthly budget, this tool provides the structure you need to stay organized.
 
-Key Features
-Effortless Logging: Quickly add, edit, and organize your daily expenses.
+---
 
-Visual Insights: Don't just look at lists—see your spending habits through dynamic charts powered by JFreeChart.
+## Key Features
 
-Local & Private: Your financial data stays yours. Everything is stored in a local SQLite database (expenses.db) right on your machine.
+### Effortless Logging
+Quickly add, edit, and organize your daily expenses.
 
-Modern Interface: Enjoy a smooth, user-friendly experience crafted with JavaFX.
+### Visual Insights
+Don't just look at lists — understand your spending habits through dynamic charts powered by **JFreeChart**.
 
-Clean Architecture: Built using a client-server logic split, making the code easy to read, maintain, and scale.
- 
-Built With
-Java: The backbone of the application.
+### Local & Private
+Your financial data stays yours. Everything is stored in a local **SQLite database (`expenses.db`)** directly on your machine.
 
-JavaFX: For a responsive and intuitive user interface.
+### Modern Interface
+Enjoy a smooth and user-friendly experience built with **JavaFX**.
 
-SQLite (java.sql): For reliable, lightweight data storage.
+### Clean Architecture
+The project follows a **client–server logic separation**, making the code easier to read, maintain, and scale.
 
-JFreeChart: For turning data into beautiful, easy-to-read graphs.
+---
 
-Project Structure
-The code is organized logically to keep things tidy:
+## Built With
 
-client/: Handles everything the user sees and interacts with.
+- **Java** — Core programming language used to build the application.
+- **JavaFX** — Provides a responsive graphical user interface.
+- **SQLite (java.sql)** — Lightweight local database for storing expenses.
+- **JFreeChart** — Generates clear and interactive data visualizations.
 
-database/: The "brain" that talks to your local data storage.
+---
 
-models/: Simple templates for how an "Expense" is defined.
+## Project Structure
 
-server/: Manages the core logic and processing.
+The project is organized into the following directories:
 
-resources/: Holds the FXML files that define the visual layout.
+```
+client/      # Handles everything the user sees and interacts with
+database/    # Manages communication with the SQLite database
+models/      # Defines data models such as the Expense class
+server/      # Contains core application logic
+resources/   # Stores FXML files that define the UI layout
+```
 
-Getting Started
-Prerequisites
-Java 11 or higher
+---
 
-JavaFX SDK (required to run the GUI)
+## Getting Started
 
-JFreeChart library
+### Prerequisites
 
-Setup & Run
-Grab the code:
+Make sure the following are installed:
 
-Bash
+- **Java 11 or higher**
+- **JavaFX SDK**
+- **JFreeChart library**
+
+---
+
+## Setup and Run
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/ajayv-19/advavanced_expense_tracker_java.git
 cd advavanced_expense_tracker_java
-Open in your favorite IDE:
-Import the project into IntelliJ, Eclipse, or VS Code.
+```
 
-Configure JavaFX:
-Add the JavaFX library to your project structure and include the following in your VM options:
+### 2. Open the project
 
-Plaintext
+Import the project into your preferred IDE:
+
+- IntelliJ IDEA  
+- Eclipse  
+- VS Code  
+
+---
+
+### 3. Configure JavaFX
+
+Add JavaFX to your project and include the following VM options:
+
+```plaintext
 --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml
-Run:
-Locate the main class in the client package and hit Run!
+```
+
+Replace `/path/to/javafx-sdk` with the actual path where JavaFX is installed.
+
+---
+
+### 4. Run the application
+
+Locate the **main class inside the `client` package** and run the application from your IDE.
+
+---
+
+## Future Improvements
+
+- Export reports to PDF or Excel
+- Cloud synchronization
+- Expense categories and budgets
+- Mobile companion application
